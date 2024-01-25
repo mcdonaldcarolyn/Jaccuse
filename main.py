@@ -17,4 +17,12 @@ assert len(ITEMS) == 9
 assert len(PLACES) == 9 
 assert len(PLACE_FIRST_LETTERS.keys()) ==  len(PLACES)
 
+knownSuspectsAndItems = []
+visitedPlaces = {}
+currentLocation = 'TAXI'
+accusedSuspects = []
+liars = ramdom.sample(SUSPECTS, random.randint(3,4))
+accusationsLeft = 3
+culprit = random.choice(SUSPECTS)
+
 
