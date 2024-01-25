@@ -46,5 +46,23 @@ for i, interviewee in enumerate(SUSPECTS):
             clues[interviewee][suspect] = PLACES[SUSPECTS.index(suspect)]
         else:
             clues[interviewee][suspect] = ITEMS[SUSPECTS.index(suspect)]
-            
 
+for i, interviewee in enumerate(SUSPECTS):
+    if interviewee not in liars:
+        continue
+    
+    clues[interviewee] = {}
+    clues[interviewee]['debug_liar'] = True
+
+    for item in ITEMS:
+        if random.randint(0, 1) == 0:
+            while True:
+                clues[interviewee][item]= random.choice(PLACES)
+                if clues[interviewee][item] != PLACES[ITEM.index(item)]:
+                    break
+        else:
+            while True:
+                clues[interviewee][suspect] = random.choice(ITEMS)
+                if clues[interviewee][suspect] != ITEMS[SUSPECTS.index(suspect)]:
+                    break
+                    
