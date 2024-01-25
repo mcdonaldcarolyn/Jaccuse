@@ -12,4 +12,9 @@ for place in PLACES:
     if len(place) > LONGEST_PLACE_NAME_LENGTH:
         LONGEST_PLACE_NAME_LENGTH = len(place)
 
-assert 
+assert len(SUSPECTS) == 8 
+assert len(ITEMS) == 9
+assert len(PLACES) == 9 
+assert len(PLACE_FIRST_LETTERS.keys()) ==  len(PLACES)
+
+
