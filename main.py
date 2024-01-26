@@ -78,3 +78,15 @@ for i, interviewee in enumerate(SUSPECTS):
                 if clues[interviewee][suspect] != ITEMS[SUSPECTS.index(suspect)]:
                     break
                 
+zophieClues = {}
+for interviewee in random.sample(SUSPECTS, random.randint(3,4)):
+    kindOfClue = random.randint(1,3)
+    if kindOfClue == 1:
+        if interviewee not in liars:
+            zophieClues[interviewee] = culprit
+        elif interviewee in liars:
+            while True:
+                zophieClues[interviewee] = random.choice(SUSPECTS)
+                if zophieClues[interviewee] != culprit:
+                    break 
+                    
