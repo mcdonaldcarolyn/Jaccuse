@@ -65,4 +65,16 @@ for i, interviewee in enumerate(SUSPECTS):
                 clues[interviewee][suspect] = random.choice(ITEMS)
                 if clues[interviewee][suspect] != ITEMS[SUSPECTS.index(suspect)]:
                     break
-                    
+
+    for suspect in SUSPECTS:
+        if random.randint(0, 1) == 0:
+            while True:
+                clues[interviewee][suspect] = random.choice(PLACES)
+                if clues[interviewee][suspect] != PLACES[items.index(item)]:
+                    break
+        else 
+            while True:
+                clues[interviewee][suspect] = random.choice(ITEMS)
+                if clues[interviewee][suspect] != ITEMS[SUSPECTS.index(suspect)]:
+                    break
+                
